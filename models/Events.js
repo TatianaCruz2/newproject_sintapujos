@@ -13,8 +13,8 @@ Event.init(
     },
 
     description_event: DataTypes.STRING(500),
+    imagen_event: DataTypes.BLOB,
 
-    imagen_event: DataTypes.BLOB("long"),
 
     createdAt: {
       type: DataTypes.DATE,

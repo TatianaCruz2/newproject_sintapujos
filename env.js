@@ -3,7 +3,7 @@ const database = {
      database : 'sintapujos',
      port: 5432,
      user : 'postgres',
-     password : '1234'
+     password : 'password'
 }
 
 module.exports = database;

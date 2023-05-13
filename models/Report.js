@@ -2,13 +2,6 @@ const {Model, DataTypes} = require ("sequelize");
 const db = require ("../config/Connection.js");
 const moment = require("moment-timezone");
 
-db.sync({ alter: true })
-  .then(() => {
-    console.log('Tablas "user" "Report" sincronizada correctamente con la base de datos.');
-  })
-  .catch((error) => {
-    console.error('Error al sincronizar la tabla "user":', error);
-  });
 
 class Report extends Model {}
 Report.init ({
