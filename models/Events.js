@@ -17,14 +17,14 @@ Event.init(
     imagen_event: DataTypes.BLOB("long"),
 
     createdAt: {
-      type: DataTypes.NOW,
+      type: DataTypes.DATE,
       allowNull: false,
       defaultValue: moment.utc().format("YYYY-MM-DD HH:mm:ss"),
       field: "Created",
     },
 
     updatedAt: {
-      type: DataTypes.NOW,
+      type: DataTypes.DATE,
       allowNull: false,
       defaultValue: moment.utc().format("YYYY-MM-DD HH:mm:ss"),
       field: "Updated",
