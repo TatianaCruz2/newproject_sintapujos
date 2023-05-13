@@ -26,6 +26,8 @@ exports.createEvent = async (req, res) => {
 
   const upload = multer({
     storage,
+
+    dest: 'public/uploads',
     fileFilter: (req, file, cb) => {
       const filetypes = /jpeg|jpg|png/;
       const mimetype = filetypes.test(file.mimetype);
