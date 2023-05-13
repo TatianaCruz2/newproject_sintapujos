@@ -1,0 +1,47 @@
+const {Model, DataTypes} = require ("sequelize");
+const db = require ("../config/Connection.js");
+const moment = require("moment-timezone");
+
+db.sync({ alter: true })
+  .then(() => {
+    console.log('Tablas "user" "Report" sincronizada correctamente con la base de datos.');
+  })
+  .catch((error) => {
+    console.error('Error al sincronizar la tabla "user":', error);
+  });
+
+class Report extends Model {}
+Report.init ({
+    id_report:{
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+    },
+    description_report:{
+        type: DataTypes.STRING(1200),
+        
+    },
+    createdAt: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        defaultValue: moment.utc().format("YYYY-MM-DD HH:mm:ss"),
+        field: "Created",
+      },
+  
+    updatedAt: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        defaultValue: moment.utc().format("YYYY-MM-DD HH:mm:ss"),
+        field: "Updated",
+      },
+},
+{
+    db,
+    sequelize: db,
+    modelName: "Report",
+    tableName: "report",
+
+});
+
+module.exports = Report;
+

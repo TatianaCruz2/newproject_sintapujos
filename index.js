@@ -9,9 +9,9 @@ app.use('/api', require('./router/routes.js'))
 const PORT = 3000;
 
 app.listen(PORT, (err) => {
-    if(err){
+    if (err) {
         console.log(`error server: ${err}`);
-    }else{
+    } else {
         console.log(`Server running successfully on port: ${PORT}`);
     }
 })

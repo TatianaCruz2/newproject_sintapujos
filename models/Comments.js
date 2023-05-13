@@ -2,7 +2,7 @@ const { Model, DataTypes } = require("sequelize");
 const db = require("../config/Connection.js");
 const moment = require("moment-timezone");
 
-class Comments extends Model {}
+class Comments extends Model { }
 
 Comments.init(
   {
@@ -15,7 +15,7 @@ Comments.init(
     description_comments: {
       //DataTypes.STRING(1200), allowNull : true,
       type: DataTypes.STRING(1200),
-      allowNull: false,
+
     },
 
     createdAt: {
