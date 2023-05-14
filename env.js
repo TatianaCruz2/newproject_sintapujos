@@ -3,7 +3,10 @@ const database = {
      database : 'sintapujos',
      port: 5432,
      user : 'postgres',
-     password : 'password'
+     password : 'password',
+     SECRET: 'auth-api'
+
 }
+
 
 module.exports = database;

@@ -12,7 +12,10 @@ Role.init({
         autoIncrement: true,
     },
 
-    name_role: DataTypes.STRING,
+    name_role:{
+      type: DataTypes.STRING(20),
+      allowNull: false,
+    },
 
     createdAt: {
         type: DataTypes.DATE,
