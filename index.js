@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 require("./config/Connection.js");
+require("./config/Associations.js");
 const {createRoles} = require("./libs/initialSetup.js");
 
 

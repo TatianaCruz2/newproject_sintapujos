@@ -3,8 +3,6 @@ const router = require('express').Router();
 const CommentController = require('../controller/CommentController.js');
 const ReportController = require('../controller/ReportController.js');
 const UserController = require('../controller/UserController.js');
-
-/////////////////////////Coment////////////////////////////////////////
 const EventController = require('../controller/EventController.js');
 const RoleController = require('../controller/RoleController.js');
 ///////////////////////////Comments//////////////////////////////
