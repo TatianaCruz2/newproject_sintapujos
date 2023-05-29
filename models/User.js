@@ -40,6 +40,12 @@ User.init(
     number_ficha_user: {
       type: DataTypes.INTEGER(20),
     },
+
+    rol_id:{
+      type: DataTypes.INTEGER,
+      foreignKey: true,
+    },
+
     createdAt: {
       type: DataTypes.DATE,
       allowNull: false,

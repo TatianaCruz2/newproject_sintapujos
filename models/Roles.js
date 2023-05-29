@@ -14,7 +14,7 @@ Role.init({
 
     name_role:{
       type: DataTypes.STRING(20),
-      allowNull: false,
+      allowNull: true,
     },
 
     createdAt: {
@@ -40,3 +40,4 @@ Role.init({
 });
 
 module.exports = Role;
+
